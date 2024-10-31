@@ -1,10 +1,10 @@
 import { server as _server } from '@hapi/hapi';
 import routes from './routes.js';
-import process from 'process';
 
 const init = async () => {
   const server = _server({
     port: 8017,
+    // eslint-disable-next-line no-undef
     host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
     routes: {
       cors: {
